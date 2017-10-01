@@ -1,0 +1,24 @@
+#    ▄██████▄   ▄█      ███
+#   ███    ███ ███  ▀█████████▄
+#   ███    █▀  ███▌    ▀███▀▀██
+#  ▄███        ███▌     ███   ▀
+# ▀▀███ ████▄  ███▌     ███
+#   ███    ███ ███      ███
+#   ███    ███ ███      ███
+#   ████████▀  █▀      ▄████▀
+
+[user]
+	name = enzozafra
+	email = zafra@ualberta.ca
+[push]
+	default = current
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+[diff]
+	tool = vimdiff
+[mergetool]
+	path = vim
+[merge]
+	tool = vimdiff
