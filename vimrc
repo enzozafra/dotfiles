@@ -200,3 +200,5 @@ source $HOME/.vimrc.statusline.vim
 
 " theme
 colorscheme gruvbox
+
+highlight Comment cterm=italic
