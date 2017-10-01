@@ -2,8 +2,6 @@
 
 ![gruvbox-dark](screenshots/screen-gruvbox-dark.png)
 
-See the screenshots folder for (possibly outdated) screenshots of other themes.
-
 ## installation
 
 1. Clone this repo to `~/.dotfiles`
@@ -36,3 +34,6 @@ rcup new-dotfile
 ## license
 
 [MIT](http://ismay.mit-license.org/)
+
+## contributors
+Ismay Wolff
