@@ -122,18 +122,32 @@ alias nt="npm test"
 alias nr="npm run"
 
 # paths
-alias p="cd ~/Documents/Projects"
+alias proj="cd ~/Documents/Projects"
 alias d="cd ~/.dotfiles"
-alias thisyr="cd ~/Documents/School/Fourth\ Year\ First\ Sem/"
+alias thisyr="cd ~/Documents/School/7thsem"
 alias school="cd ~/Documents/School"
-alias 301="cd ~/Documents/School/Fourth\ Year\ First\ Sem/CMPUT\ 301"
-alias 379="cd ~/Documents/School/Fourth\ Year\ First\ Sem/CMPUT\ 379"
-alias 304="cd ~/Documents/School/Fourth\ Year\ First\ Sem/ECE\ 304"
-alias 342="cd ~/Documents/School/Fourth\ Year\ First\ Sem/ECE\ 342"
-alias 410="cd ~/Documents/School/Fourth\ Year\ First\ Sem/ECE\ 410"
+alias 201="cd ~/Documents/School/7thsem/mate201"
+alias 422="cd ~/Documents/School/7thsem/ece422"
+alias 420="cd ~/Documents/School/7thsem/ece420"
+alias 315="cd ~/Documents/School/7thsem/ece315"
+alias 301="cd ~/Documents/School/7thsem/blaw301"
+alias 466="cd ~/Documents/School/7thsem/comp466"
+alias andrews="cd ~/Documents/School/7thsem/ece420/e420_wspace"
+alias prep="cd ~/Documents/School/interviewprep"
+alias portfolio="cd ~/Documents/Projects/portfolio"
 
 # colorized cat
 alias cat="ccat"
+
+#alias docker rm exited container
+alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
+
+#alias ssh 420 lab
+alias 420ssh="ssh -p9033 user_33@162.246.157.207"
+
+420scp() {
+  scp -P9033 -r $1 user_33@162.246.157.207:~/
+}
 
 # use agignore
 alias ag="ag --path-to-agignore ~/.agignore"

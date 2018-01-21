@@ -17,9 +17,13 @@ syntax on                             " syntax highlighting
 filetype plugin indent on             " try to recognise filetype and load plugins and indent files
 
 " set true colors and add vim specific fixes
-set termguicolors
-set t_8f=[38;2;%lu;%lu;%lum
-set t_8b=[48;2;%lu;%lu;%lum
+" set termguicolors
+" set t_8f=[38;2;%lu;%lu;%lum
+" set t_8b=[48;2;%lu;%lu;%lum
+
+" theme
+" colorscheme gruvbox
+
 
 " interface
 set background=dark                   " tell vim what the background color looks like
@@ -197,8 +201,5 @@ source $HOME/.vimrc.config-plugins.vim
 " ==================================================================================================
 
 source $HOME/.vimrc.statusline.vim
-
-" theme
-colorscheme gruvbox
 
 highlight Comment cterm=italic

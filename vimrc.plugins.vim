@@ -9,6 +9,7 @@ call plug#begin()
 " Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 " Plug 'whatyouhide/vim-gotham'
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 " global syntax highlighting
 Plug 'sheerun/vim-polyglot'
