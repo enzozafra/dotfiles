@@ -145,6 +145,9 @@ alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 #alias ssh 420 lab
 alias 420ssh="ssh -p9033 user_33@162.246.157.207"
 
+#alias ssh 422
+alias 422ssh="ssh -i ~/.ssh/zafra.pem ubuntu@10.2.8.22"
+
 420scp() {
   scp -P9033 -r $1 user_33@162.246.157.207:~/
 }
