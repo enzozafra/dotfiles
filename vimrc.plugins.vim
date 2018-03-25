@@ -17,8 +17,8 @@ Plug 'sheerun/vim-polyglot'
 " specific syntax highlighting
 " Plug 'fleischie/vim-styled-components'
 " Plug 'valloric/matchtagalways'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'mxw/vim-jsx'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'mxw/vim-jsx'
 
 " text manipulation
 " Plug 'Raimondi/delimitMate'
@@ -63,5 +63,8 @@ Plug 'tpope/vim-surround'
 
 " devicons (load this last)
 " Plug 'ryanoasis/vim-devicons'
+
+" XML
+Plug 'othree/xml.vim'
 
 call plug#end()

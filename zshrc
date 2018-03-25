@@ -146,11 +146,18 @@ alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 alias 420ssh="ssh -p9033 user_33@162.246.157.207"
 
 #alias ssh 422
-alias 422ssh="ssh -i ~/.ssh/zafra.pem ubuntu@10.2.8.22"
+alias 422ssh="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251"
 
 420scp() {
   scp -P9033 -r $1 user_33@162.246.157.207:~/
 }
+
+422scp() {
+  scp -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251:~/
+}
+
+# use python2.7
+alias python=/usr/local/bin/python2.7
 
 # use agignore
 alias ag="ag --path-to-agignore ~/.agignore"
@@ -165,7 +172,7 @@ alias ssh="TERM=xterm-256color ssh"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # serve current directory on port 8080
-alias serve="python -m SimpleHTTPServer 8080"
+alias serve="python -m SimpleHTTPServer"
 
 # put removed files in trash
 alias rm="trash"
