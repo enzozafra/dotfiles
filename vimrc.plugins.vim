@@ -14,17 +14,14 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'sheerun/vim-polyglot'
 
 " specific syntax highlighting
-" Plug 'fleischie/vim-styled-components'
-" Plug 'valloric/matchtagalways'
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'mxw/vim-jsx'
+Plug 'valloric/matchtagalways'        "highlights matching tags for html
+" Plug 'mxw/vim-jsx'                  " for react dunno what to use for
 
 " text manipulation
-" Plug 'alvan/vim-closetag'
-" Plug 'maralla/completor.vim'
+Plug 'alvan/vim-closetag'
+Plug 'maralla/completor.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'lifepillar/vim-mucomplete'
 Plug 'mattn/emmet-vim'
 Plug 'svermeulen/vim-easyclip'
 
