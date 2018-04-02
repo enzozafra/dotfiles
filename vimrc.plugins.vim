@@ -5,11 +5,10 @@
 call plug#begin()
 
 " load theme
-" Plug 'cocopon/iceberg.vim'
-" Plug 'sonph/onehalf', { 'rtp': 'vim/' }
-" Plug 'whatyouhide/vim-gotham'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'ayu-theme/ayu-vim'
 
 " global syntax highlighting
 Plug 'sheerun/vim-polyglot'
@@ -21,8 +20,6 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'mxw/vim-jsx'
 
 " text manipulation
-" Plug 'Raimondi/delimitMate'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'alvan/vim-closetag'
 " Plug 'maralla/completor.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -41,7 +38,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 
 " interface
-" Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -61,10 +60,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
-" devicons (load this last)
-" Plug 'ryanoasis/vim-devicons'
 
 " XML
 Plug 'othree/xml.vim'
+
+" devicons (load this last)
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

@@ -88,7 +88,7 @@ if has_key(g:plugs, 'vim-airline')
 endif
 
 if has_key(g:plugs, 'vim-closetag')
-  let g:closetag_filenames = "*.html,*.jsx"
+  let g:closetag_filenames = "*.html,*.jsx,*.xml,*.php"
 endif
 
 if has_key(g:plugs, 'vim-devicons')

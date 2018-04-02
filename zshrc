@@ -21,6 +21,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bira"
+VIM_THEME="ayu"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -135,6 +136,7 @@ alias 466="cd ~/Documents/School/7thsem/comp466"
 alias andrews="cd ~/Documents/School/7thsem/ece420/e420_wspace"
 alias prep="cd ~/Documents/School/interviewprep"
 alias portfolio="cd ~/Documents/Projects/portfolio"
+alias xampp="cd /Applications/XAMPP/htdocs"
 
 # colorized cat
 alias cat="ccat"
@@ -146,13 +148,15 @@ alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 alias 420ssh="ssh -p9033 user_33@162.246.157.207"
 
 #alias ssh 422
-alias 422ssh="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251"
+alias 422sshclient="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251"
+alias 422sshmanager="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@10.1.0.138"
+alias 422sshnode="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@10.1.0.139"
 
 420scp() {
   scp -P9033 -r $1 user_33@162.246.157.207:~/
 }
 
-422scp() {
+422scpclient() {
   scp -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251:~/
 }
 
