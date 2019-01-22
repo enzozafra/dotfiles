@@ -28,7 +28,6 @@ endif
 
 if has_key(g:plugs, 'ctrlp.vim')
   if executable('ag')
-    let g:ctrlp_map = '<nn>'
 
     " use ag in ctrlp for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

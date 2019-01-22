@@ -125,18 +125,15 @@ alias nr="npm run"
 # paths
 alias proj="cd ~/Documents/Projects"
 alias d="cd ~/.dotfiles"
-alias thisyr="cd ~/Documents/School/7thsem"
+alias thisyr="cd ~/Documents/School/8thsem"
 alias school="cd ~/Documents/School"
-alias 201="cd ~/Documents/School/7thsem/mate201"
-alias 422="cd ~/Documents/School/7thsem/ece422"
-alias 420="cd ~/Documents/School/7thsem/ece420"
-alias 315="cd ~/Documents/School/7thsem/ece315"
-alias 301="cd ~/Documents/School/7thsem/blaw301"
-alias 466="cd ~/Documents/School/7thsem/comp466"
-alias andrews="cd ~/Documents/School/7thsem/ece420/e420_wspace"
-alias prep="cd ~/Documents/School/interviewprep"
+alias 325="cd ~/Documents/School/8thsem/CMPUT325"
+alias 487="cd ~/Documents/School/8thsem/ECE487"
+alias 492="cd ~/Documents/School/8thsem/ECE492"
+alias 456="cd ~/Documents/School/8thsem/ECE456"
+alias 321="cd ~/Documents/School/8thsem/SOCI321"
+alias old="cd ~/Documents/School/old"
 alias portfolio="cd ~/Documents/Projects/portfolio"
-alias xampp="cd /Applications/XAMPP/htdocs"
 
 # colorized cat
 alias cat="ccat"
@@ -144,24 +141,14 @@ alias cat="ccat"
 #alias docker rm exited container
 alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 
-#alias ssh 420 lab
-alias 420ssh="ssh -p9033 user_33@162.246.157.207"
-
-#alias ssh 422
-alias 422sshclient="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251"
-alias 422sshmanager="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@10.1.0.138"
-alias 422sshnode="ssh -i ~/.ssh/lorenzo-zafra.pem ubuntu@10.1.0.139"
-
-420scp() {
-  scp -P9033 -r $1 user_33@162.246.157.207:~/
-}
-
-422scpclient() {
-  scp -i ~/.ssh/lorenzo-zafra.pem ubuntu@162.246.156.251:~/
-}
+#youtube download
+alias ytdl="youtube-dl --audio-format mp3 -x "
 
 # use python2.7
-alias python=/usr/local/bin/python2.7
+# alias python=/usr/local/bin/python2.7
+
+# use python3.7
+alias python=/usr/local/bin/python3.7
 
 # use agignore
 alias ag="ag --path-to-agignore ~/.agignore"
@@ -195,3 +182,9 @@ stty erase '^?'
 cdr() {
   cd "$(git rev-parse --show-toplevel)"
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/enzozafra/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/enzozafra/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/enzozafra/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/enzozafra/google-cloud-sdk/completion.zsh.inc'; fi
