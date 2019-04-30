@@ -19,6 +19,3 @@ source ./scripts/tmux.sh
 
 # install with curl
 source ./scripts/curl.sh
-
-# install atom packages
-source ./scripts/apm.sh

@@ -22,14 +22,8 @@ brew install 'watchman'
 brew install 'zsh'
 
 # Casks
-brew cask install 'atom'
-brew cask install 'keybase'
-brew cask install 'dropbox'
-brew cask install 'enpass'
-brew cask install 'opera'
 brew cask install 'iterm2'
-brew cask install 'microsoft-office'
-brew cask install 'viscosity'
+brew cask install 'vscode'
 
 # Mas
 # mas install 824183456
