@@ -131,16 +131,7 @@ alias candvenv="source venv/bin/activate"
 
 # paths
 alias proj="cd ~/Documents/Projects"
-alias cand="cd ~/Documents/Projects/CAN-D"
 alias d="cd ~/.dotfiles"
-alias thisyr="cd ~/Documents/School/8thsem"
-alias school="cd ~/Documents/School"
-alias 325="cd ~/Documents/School/8thsem/CMPUT325"
-alias 487="cd ~/Documents/School/8thsem/ECE487"
-alias 492="cd ~/Documents/School/8thsem/ECE492"
-alias 456="cd ~/Documents/School/8thsem/ECE456"
-alias 321="cd ~/Documents/School/8thsem/SOCI321"
-alias old="cd ~/Documents/School/old"
 alias portfolio="cd ~/Documents/Projects/portfolio"
 
 # colorized cat
@@ -191,8 +182,6 @@ cdr() {
   cd "$(git rev-parse --show-toplevel)"
 }
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/enzozafra/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/enzozafra/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/enzozafra/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/enzozafra/google-cloud-sdk/completion.zsh.inc'; fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
