@@ -8,17 +8,25 @@
 #   ████████▀  █▀      ▄████▀
 
 [user]
-	name = enzozafra
+	name = Lorenzo Zafra
 	email = zafra@ualberta.ca
 [push]
 	default = current
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/enzozafra/.gitignore
 	attributesfile = ~/.gitattributes
+	autocrlf = input
+	fileMode = false
 [diff]
 	tool = vimdiff
 [mergetool]
 	path = vim
 [merge]
 	tool = vimdiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

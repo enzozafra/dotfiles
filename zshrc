@@ -122,8 +122,16 @@ alias ns="npm start"
 alias nt="npm test"
 alias nr="npm run"
 
+# git
+alias gitvis="git log --graph --oneline --all --decorate"
+
+# venv
+alias venvcand="source venv/bin/activate"
+alias candvenv="source venv/bin/activate"
+
 # paths
 alias proj="cd ~/Documents/Projects"
+alias cand="cd ~/Documents/Projects/CAN-D"
 alias d="cd ~/.dotfiles"
 alias thisyr="cd ~/Documents/School/8thsem"
 alias school="cd ~/Documents/School"
