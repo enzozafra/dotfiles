@@ -16,9 +16,11 @@ brew install 'coreutils'
 brew install 'git'
 brew install 'mas'
 brew install 'node'
+brew install 'npm'
 brew install 'vim'
 brew install 'zsh-autosuggestions'
 brew install 'zsh'
+brew install 'yarn'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
