@@ -63,6 +63,25 @@ if $VIM_THEME == 'ayu'
   endif
 endif
 
+if $VIM_THEME == 'dracula'
+  if has_key(g:plugs, 'dracula')
+    colorscheme dracula
+    set termguicolors
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+    exe 'highlight StatusLine guifg=' . $VIM_STATUS_BAR_FG 'guibg=' . $VIM_STATUS_BAR_BG
+  endif
+
+  if has_key(g:plugs, 'vim-airline')
+    let g:airline_theme='deus'
+  endif
+
+  if has_key(g:plugs, 'ale')
+    exe 'highlight ALEErrorSign guifg=' . $VIM_ALE_ERROR_FG 'guibg=' . $VIM_ALE_ERROR_BG
+    exe 'highlight ALEWarningSign guifg=' . $VIM_ALE_WARNING_FG 'guibg=' . $VIM_ALE_WARNING_BG
+  endif
+endif
+
 if $VIM_THEME == 'onehalf-dark'
   if has_key(g:plugs, 'onehalf')
     colorscheme onehalfdark

@@ -8,7 +8,8 @@
 #   ████████▀  █▀      ▄████▀
 
 [user]
-	name = Lorenzo Zafra
+	name = Enzo Zafra
+	email = Lorenzo_Zafra@intuit.com
 [push]
 	default = current
 [core]

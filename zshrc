@@ -20,8 +20,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
-VIM_THEME="ayu"
+ZSH_THEME="dracula"
+VIM_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -114,6 +114,11 @@ alias tat="tmux a -t"
 alias tkill="tmux kill-session -t"
 alias tses='tmux new -As $(basename $PWD | tr . -)'
 
+# aws work stuff
+alias awsl="eiamCli login"
+alias awsc="eiamCli aws_creds -c -n cui-preprod"
+alias awss="eiamCli aws_ssh -c -n cui-preprod"
+
 # npm
 alias ni="npm install"
 alias nid="npm install --save-dev"
@@ -125,14 +130,15 @@ alias nr="npm run"
 # git
 alias gitvis="git log --graph --oneline --all --decorate"
 
-# venv
-alias venvcand="source venv/bin/activate"
-alias candvenv="source venv/bin/activate"
-
 # paths
 alias proj="cd ~/Documents/Projects"
 alias d="cd ~/.dotfiles"
 alias portfolio="cd ~/Documents/Projects/portfolio"
+alias cfs="cd ~/dev/conversation-framework-service"
+alias cds="cd ~/dev/cui-designer-service"
+alias cdui="cd ~/dev/cui-conversation-designer-v2-ui"
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
 
 # colorized cat
 alias cat="ccat"
@@ -147,7 +153,7 @@ alias ytdl="youtube-dl --audio-format mp3 -x "
 # alias python=/usr/local/bin/python2.7
 
 # use python3.7
-alias python=/usr/local/bin/python3.7
+# alias python=/usr/local/bin/python3.7
 
 # use agignore
 alias ag="ag --path-to-agignore ~/.agignore"

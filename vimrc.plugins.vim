@@ -9,6 +9,7 @@ Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " global syntax highlighting
 Plug 'sheerun/vim-polyglot'
