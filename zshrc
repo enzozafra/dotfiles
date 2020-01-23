@@ -20,7 +20,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="agnoster"
 VIM_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -107,6 +107,8 @@ alias ls="exa -lh --group-directories-first"
 # alias la="gls --color -lha --group-directories-first"
 alias la="exa -lha --group-directories-first"
 
+alias editzsh="sudo vim ~/.zshrc"
+
 # tmux
 alias tm="tmux"
 alias tls="tmux ls"
@@ -117,9 +119,12 @@ alias tkill="tmux kill-session -t"
 alias tses='tmux new -As $(basename $PWD | tr . -)'
 
 # aws work stuff
-alias awsl="eiamCli login"
-alias awsc="eiamCli aws_creds -c -n cui-preprod"
-alias awss="eiamCli aws_ssh -c -n cui-preprod"
+alias aws-l="eiamCli login"
+alias aws-c="eiamCli aws_creds -c -n cui-preprod"
+alias aws-s="eiamCli aws_ssh -c -n cui-preprod"
+alias awsdlbuild="_awsdlbuild"
+alias awslsbuild="aws s3 ls s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"
+alias awsdlmetadata="_awsdlmetadata"
 
 # npm
 alias ni="npm install"
@@ -131,14 +136,22 @@ alias nr="npm run"
 
 # git
 alias gitvis="git log --graph --oneline --all --decorate"
+alias nobootstrap="git update-index --assume-unchanged conversation-orchestration/src/main/resources/bootstrap.yml"
+alias yesbootstrap="git update-index --no-assume-unchanged conversation-orchestration/src/main/resources/bootstrap.yml"
+alias gaorch="git add . && git reset -- conversation-orchestration/src/main/resources/bootstrap.yml && git reset -- conversation-orchestration/src/main/java/com/intuit/conversation/agents/cui/config/AmazonSNSSubscriptionSetup.java"
 
 # paths
 alias proj="cd ~/Documents/Projects"
 alias d="cd ~/.dotfiles"
 alias portfolio="cd ~/Documents/Projects/portfolio"
 alias cfs="cd ~/dev/conversation-framework-service"
+alias cfsc="cd ~/dev/conversation-framework-service-config"
 alias cds="cd ~/dev/cui-designer-service"
 alias cdui="cd ~/dev/cui-conversation-designer-v2-ui"
+alias cui="cd ~/dev/conversation-ui"
+alias cuim="cd ~/dev/cui-metadata"
+alias cuiv2="cd ~/dev/conversation-framework-web"
+alias cfv2="cd ~/dev/conversation-framework-service-v2"
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
 
@@ -188,6 +201,15 @@ stty erase '^?'
 # cd to the root of a git repository
 cdr() {
   cd "$(git rev-parse --show-toplevel)"
+}
+
+
+function _awsdlbuild() {
+	aws s3 cp s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1" --recursive
+}
+
+function _awsdlmetadata() {
+	aws s3 cp s3://conversation-designer-metadata ~/Documents/work/s3/metadata --recursive
 }
 
 export NVM_DIR="$HOME/.nvm"

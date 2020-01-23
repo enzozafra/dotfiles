@@ -17,12 +17,9 @@ syntax on                             " syntax highlighting
 filetype plugin indent on             " try to recognise filetype and load plugins and indent files
 
 " set true colors and add vim specific fixes
-" set termguicolors
+set termguicolors
 " set t_8f=[38;2;%lu;%lu;%lum
 " set t_8b=[48;2;%lu;%lu;%lum
-
-" theme
-" colorscheme gruvbox
 
 
 " interface
