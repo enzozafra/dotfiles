@@ -122,9 +122,13 @@ alias tses='tmux new -As $(basename $PWD | tr . -)'
 alias aws-l="eiamCli login"
 alias aws-c="eiamCli aws_creds -c -n cui-preprod"
 alias aws-s="eiamCli aws_ssh -c -n cui-preprod"
-alias awsdlbuild="_awsdlbuild"
+alias awsdlbuildtda="_awsdlbuildtda"
+alias awsdlbuildsbseg="_awsdlbuildsbseg"
 alias awslsbuild="aws s3 ls s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"
 alias awsdlmetadata="_awsdlmetadata"
+
+alias runorch="/Users/lzafra/dev/cui-orchestration/mvnw -pl app clean spring-boot:run"
+alias runorchdev="/Users/lzafra/dev/cui-orchestration/mvnw -pl app clean spring-boot:run -Dspring-boot.run.profiles=dev"
 
 # npm
 alias ni="npm install"
@@ -138,7 +142,8 @@ alias nr="npm run"
 alias gitvis="git log --graph --oneline --all --decorate"
 alias nobootstrap="git update-index --assume-unchanged conversation-orchestration/src/main/resources/bootstrap.yml"
 alias yesbootstrap="git update-index --no-assume-unchanged conversation-orchestration/src/main/resources/bootstrap.yml"
-alias gaorch="git add . && git reset -- conversation-orchestration/src/main/resources/bootstrap.yml && git reset -- conversation-orchestration/src/main/java/com/intuit/conversation/agents/cui/config/AmazonSNSSubscriptionSetup.java"
+alias gaorch="git add app/src/main/java app/src/main/kotlin app/src/test/java app/src/test/kotlin test/overwatch-test"
+
 
 # paths
 alias proj="cd ~/Documents/Projects"
@@ -149,9 +154,12 @@ alias cfsc="cd ~/dev/conversation-framework-service-config"
 alias cds="cd ~/dev/cui-designer-service"
 alias cdui="cd ~/dev/cui-conversation-designer-v2-ui"
 alias cui="cd ~/dev/conversation-ui"
+alias cuio="cd ~/dev/cui-orchestration"
 alias cuim="cd ~/dev/cui-metadata"
-alias cuiv2="cd ~/dev/conversation-framework-web"
+alias cfw="cd ~/dev/conversation-framework-web"
 alias cfv2="cd ~/dev/conversation-framework-service-v2"
+alias tda="cd ~/dev/turbotax-digital-assistant"
+alias tdacontent="cd ~/Documents/work/s3/builds/tda/current"
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
 
@@ -204,12 +212,16 @@ cdr() {
 }
 
 
-function _awsdlbuild() {
+function _awsdlbuildtda() {
 	aws s3 cp s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1" --recursive
 }
 
 function _awsdlmetadata() {
 	aws s3 cp s3://conversation-designer-metadata ~/Documents/work/s3/metadata --recursive
+}
+
+function _awsdlbuildsbseg() {
+	aws s3 cp s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/"$1" ~/Documents/work/s3/builds/sbseg_iva/"$1" --recursive
 }
 
 export NVM_DIR="$HOME/.nvm"
