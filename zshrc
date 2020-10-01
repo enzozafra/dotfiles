@@ -155,6 +155,7 @@ alias cds="cd ~/dev/cui-designer-service"
 alias cdui="cd ~/dev/cui-conversation-designer-v2-ui"
 alias cui="cd ~/dev/conversation-ui"
 alias cuio="cd ~/dev/cui-orchestration"
+alias cuiad="cd ~/dev/cuiad"
 alias cuim="cd ~/dev/cui-metadata"
 alias cfw="cd ~/dev/conversation-framework-web"
 alias cfv2="cd ~/dev/conversation-framework-service-v2"
@@ -221,7 +222,7 @@ function _awsdlmetadata() {
 }
 
 function _awsdlbuildsbseg() {
-	aws s3 cp s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/"$1" ~/Documents/work/s3/builds/sbseg_iva/"$1" --recursive
+	aws s3 sync s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/
 }
 
 export NVM_DIR="$HOME/.nvm"
