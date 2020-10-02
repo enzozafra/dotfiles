@@ -24,6 +24,7 @@ brew install 'yarn'
 brew install 'tmux'
 brew install 'rcm'
 brew install 'exa'
+brew install 'trash'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
