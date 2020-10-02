@@ -23,6 +23,7 @@ brew install 'zsh'
 brew install 'yarn'
 brew install 'tmux'
 brew install 'rcm'
+brew install 'exa'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
