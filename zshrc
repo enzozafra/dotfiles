@@ -214,15 +214,15 @@ cdr() {
 
 
 function _awsdlbuildtda() {
-	aws s3 cp s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1" --recursive
+	aws s3 cp s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1" --recursive
 }
 
 function _awsdlmetadata() {
-	aws s3 cp s3://conversation-designer-metadata ~/Documents/work/s3/metadata --recursive
+	aws s3 cp s3://conversation-designer-metadata-preprod ~/Documents/work/s3/metadata --recursive
 }
 
 function _awsdlbuildsbseg() {
-	aws s3 sync s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/
+	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/"$1" ~/Documents/work/s3/builds/sbseg_iva/"$1"
 }
 
 export NVM_DIR="$HOME/.nvm"

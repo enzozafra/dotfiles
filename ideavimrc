@@ -1,0 +1,13 @@
+set clipboard+=unnamed
+vnoremap > ><CR>gvll
+vnoremap < <<CR>gvhh
+
+nnoremap d "xd
+vnoremap d "xd
+nnoremap y "xy
+vnoremap y "xy
+nnoremap p "xp
+vnoremap p "xp
+
+" select all
+nnoremap <leader>a ggVG<CR>
