@@ -21,6 +21,8 @@ brew install 'vim'
 brew install 'zsh-autosuggestions'
 brew install 'zsh'
 brew install 'yarn'
+brew install 'tmux'
+brew install 'rcm'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
@@ -28,6 +30,13 @@ brew cask install --appdir="/Applications" 'visual-studio-code'
 brew cask install --appdir="/Applications" 'google-chrome'
 brew cask install --appdir="/Applications" 'alfred'
 brew cask install --appdir="/Applications" 'spotify'
+brew cask install --appdir="/Applications" 'marta'
+brew cask install --appdir="/Applications" 'caffeine'
+brew cask install --appdir="/Applications" 'intellij-idea'
+brew cask install --appdir="/Applications" 'notion'
+brew cask install --appdir="/Applications" 'postman'
+brew cask install --appdir="/Applications" 'zoomus'
+brew cask install --appdir="/Applications" 'clipy'
 
 brew cask alfred link
 
