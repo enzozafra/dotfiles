@@ -44,6 +44,7 @@ if $VIM_THEME == 'deus'
 endif
 
 if $VIM_THEME == 'ayu'
+  echo 'ayu'
   if has_key(g:plugs, 'ayu-vim')
     let ayucolor="mirage"
     colorscheme ayu
@@ -54,7 +55,7 @@ if $VIM_THEME == 'ayu'
   endif
 
   if has_key(g:plugs, 'vim-airline')
-    let g:airline_theme='deus'
+    let g:airline_theme='ayu_mirage'
   endif
 
   if has_key(g:plugs, 'ale')
@@ -65,7 +66,7 @@ endif
 
 if $VIM_THEME == 'dracula'
   if has_key(g:plugs, 'dracula')
-    colorscheme dracula
+    colorscheme draculaA
     set termguicolors
     set t_8f=[38;2;%lu;%lu;%lum
     set t_8b=[48;2;%lu;%lu;%lum
@@ -106,5 +107,22 @@ if $VIM_THEME == 'iceberg'
   if has_key(g:plugs, 'ale')
     exe 'highlight ALEErrorSign guifg=' . $VIM_ALE_ERROR_FG 'guibg=' . $VIM_ALE_ERROR_BG
     Exe 'highlight ALEWarningSign guifg=' . $VIM_ALE_WARNING_FG 'guibg=' . $VIM_ALE_WARNING_BG
+  endif
+endif
+
+if $VIM_THEME == 'panda'
+    colorscheme panda
+    set termguicolors
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+    exe 'highlight StatusLine guifg=' . $VIM_STATUS_BAR_FG 'guibg=' . $VIM_STATUS_BAR_BG
+
+  if has_key(g:plugs, 'vim-airline')
+    let g:airline_theme='deus'
+  endif
+
+  if has_key(g:plugs, 'ale')
+    exe 'highlight ALEErrorSign guifg=' . $VIM_ALE_ERROR_FG 'guibg=' . $VIM_ALE_ERROR_BG
+    exe 'highlight ALEWarningSign guifg=' . $VIM_ALE_WARNING_FG 'guibg=' . $VIM_ALE_WARNING_BG
   endif
 endif

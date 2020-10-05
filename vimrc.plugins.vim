@@ -10,7 +10,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'markvincze/panda-vim'
+Plug 'markvincze/panda-vim', { 'as': 'panda' }
 Plug 'noahfrederick/vim-noctu'
 
 " global syntax highlighting

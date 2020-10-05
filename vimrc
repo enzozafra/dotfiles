@@ -107,6 +107,8 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 let mapleader=";"
 let g:mapleader=";"
 
+let g:polyglot_disabled = ['css']
+
 " adjust window size with arrow keys
 noremap <right> <C-w>5>
 noremap <left> <C-w>5<

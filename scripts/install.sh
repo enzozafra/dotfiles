@@ -25,6 +25,10 @@ brew install 'tmux'
 brew install 'rcm'
 brew install 'exa'
 brew install 'trash'
+brew install zsh-syntax-highlighting
+brew install 'awscli'
+brew install 'maven'
+brew install 'gradle
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
