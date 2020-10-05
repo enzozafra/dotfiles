@@ -44,7 +44,6 @@ if $VIM_THEME == 'deus'
 endif
 
 if $VIM_THEME == 'ayu'
-  echo 'ayu'
   if has_key(g:plugs, 'ayu-vim')
     let ayucolor="mirage"
     colorscheme ayu
@@ -66,7 +65,7 @@ endif
 
 if $VIM_THEME == 'dracula'
   if has_key(g:plugs, 'dracula')
-    colorscheme draculaA
+    colorscheme dracula
     set termguicolors
     set t_8f=[38;2;%lu;%lu;%lum
     set t_8b=[48;2;%lu;%lu;%lum
