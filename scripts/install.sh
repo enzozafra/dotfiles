@@ -30,6 +30,7 @@ brew install 'awscli'
 brew install 'maven'
 brew install 'gradle
 brew install 'tomcat'
+brew install 'nvm'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
