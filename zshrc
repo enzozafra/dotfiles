@@ -149,7 +149,7 @@ alias gaorch="git add app/src/main/java app/src/main/kotlin app/src/test/java ap
 
 # paths
 alias proj="cd ~/Documents/Projects"
-alias d="cd ~/.dotfiles"
+alias dotfiles="cd ~/.dotfiles"
 alias portfolio="cd ~/Documents/Projects/portfolio"
 alias cfs="cd ~/dev/conversation-framework-service"
 alias cfsc="cd ~/dev/conversation-framework-service-config"
@@ -163,6 +163,8 @@ alias cfw="cd ~/dev/conversation-framework-web"
 alias cfv2="cd ~/dev/conversation-framework-service-v2"
 alias tda="cd ~/dev/turbotax-digital-assistant"
 alias tdacontent="cd ~/Documents/work/s3/builds/tda/current"
+alias tdacontent="cd ~/Documents/work/s3/builds/sbseg_iva/preview"
+alias dev="cd ~/dev"
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
 
@@ -216,11 +218,11 @@ cdr() {
 
 
 function _awsdlbuildtda() {
-	aws s3 cp s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1" --recursive
+	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1"
 }
 
 function _awsdlmetadata() {
-	aws s3 cp s3://conversation-designer-metadata-preprod ~/Documents/work/s3/metadata --recursive
+	aws s3 sync s3://conversation-designer-metadata-preprod ~/Documents/work/s3/metadata
 }
 
 function _awsdlbuildsbseg() {
@@ -230,3 +232,6 @@ function _awsdlbuildsbseg() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.scripts/.iterm2_shell_integration.zsh
+

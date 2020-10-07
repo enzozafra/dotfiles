@@ -29,6 +29,7 @@ brew install zsh-syntax-highlighting
 brew install 'awscli'
 brew install 'maven'
 brew install 'gradle
+brew install 'tomcat'
 
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
