@@ -110,6 +110,7 @@ alias ls="exa -lh --group-directories-first"
 alias la="exa -lha --group-directories-first"
 
 alias editzsh="sudo vim ~/.zshrc"
+alias sourcezsh="source ~/.zshrc"
 
 # tmux
 alias tm="tmux"
@@ -125,7 +126,10 @@ alias aws-l="eiamCli login"
 alias aws-c="eiamCli aws_creds -c -n cui-preprod"
 alias aws-s="eiamCli aws_ssh -c -n cui-preprod"
 alias awsdlbuildtda="_awsdlbuildtda"
+alias awsdlbuildqba="_awsdlbuildqba"
 alias awsdlbuildsbseg="_awsdlbuildsbseg"
+alias awsdlbuildcgiva="_awsdlbuildcgiva"
+alias awsdlbuild="_awsdlbuild"
 alias awslsbuild="aws s3 ls s3://conversation-designer-builds/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"
 alias awsdlmetadata="_awsdlmetadata"
 
@@ -148,9 +152,10 @@ alias gaorch="git add app/src/main/java app/src/main/kotlin app/src/test/java ap
 
 
 # paths
-alias proj="cd ~/Documents/Projects"
+alias proj="cd ~/dev/personal"
+alias study="cd ~/dev/personal/study"
 alias dotfiles="cd ~/.dotfiles"
-alias portfolio="cd ~/Documents/Projects/portfolio"
+alias portfolio="cd ~/dev/personal/enzozafra.github.io"
 alias cfs="cd ~/dev/conversation-framework-service"
 alias cfsc="cd ~/dev/conversation-framework-service-config"
 alias cds="cd ~/dev/cui-designer-service"
@@ -162,9 +167,11 @@ alias cuim="cd ~/dev/cui-metadata"
 alias cfw="cd ~/dev/conversation-framework-web"
 alias cfv2="cd ~/dev/conversation-framework-service-v2"
 alias ivaui="cd ~/dev/iva-authentication"
+alias ensoe="cd ~/dev/ensoe"
+alias slack="cd ~/dev/slack-cui-adapter"
 alias tda="cd ~/dev/turbotax-digital-assistant"
 alias tdacontent="cd ~/Documents/work/s3/builds/tda/current"
-alias tdacontent="cd ~/Documents/work/s3/builds/sbseg_iva/preview"
+alias sbsegcontent="cd ~/Documents/work/s3/builds/sbseg_iva/preview"
 alias dev="cd ~/dev"
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
@@ -175,8 +182,8 @@ alias cat="ccat"
 #alias docker rm exited container
 alias rmcontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 
-#youtube download
-alias ytdl="youtube-dl --audio-format mp3 -x "
+alias integrationenv="export TEST_PATH=\"src/test\" && export APP_SECRET=\"preprdxVPiqUdFxHyvMGMX9GnKfbaVmrutRtr1QX\" && export IUS_TEST_USER_USR=\"nabs_iamtestpass\" && export IUS_TEST_USER_PSW=\"testuser\""
+
 
 # use python2.7
 # alias python=/usr/local/bin/python2.7
@@ -222,6 +229,10 @@ function _awsdlbuildtda() {
 	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/c9e04584-911d-42cb-b960-455f767383bb/"$1" ~/Documents/work/s3/builds/tda/"$1"
 }
 
+function _awsdlbuildqba() {
+	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/55d84690-f50d-43cd-ad15-37c308df7e0e/"$1" ~/Documents/work/s3/builds/qba/"$1"
+}
+
 function _awsdlmetadata() {
 	aws s3 sync s3://conversation-designer-metadata-preprod ~/Documents/work/s3/metadata
 }
@@ -230,9 +241,27 @@ function _awsdlbuildsbseg() {
 	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/9ee422b3-8d39-4d70-971e-ea4d56f2b019/"$1" ~/Documents/work/s3/builds/sbseg_iva/"$1"
 }
 
+function _awsdlbuildcgiva() {
+	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/bd46192e-19d9-40de-8bc6-7905b512f28f/"$1" ~/Documents/work/s3/builds/cg_iva/"$1"
+}
+
+function _awsdlbuild() {
+	aws s3 sync s3://conversation-designer-builds-preprod/0f273de7-dc27-4948-a8b2-44c1b415726e/"$1"/preview ~/Documents/work/s3/builds/"$1"/preview
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.scripts/.iterm2_shell_integration.zsh
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"

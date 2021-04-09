@@ -32,3 +32,5 @@
 	trustExitCode = true
 [url "git@github.intuit.com:"]
 	insteadOf = https://github.intuit.com/
+[pull]
+	rebase = true
