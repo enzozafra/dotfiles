@@ -28,7 +28,8 @@ brew install 'trash'
 brew install zsh-syntax-highlighting
 brew install 'awscli'
 brew install 'maven'
-brew install 'gradle
+brew install 'gradle'
+brew install 'cask'
 brew install 'tomcat'
 brew install 'nvm'
 
