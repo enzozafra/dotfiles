@@ -37,20 +37,18 @@ brew install homebrew/cask
 brew tap homebrew/cask
 
 # Casks
-brew cask install --appdir="/Applications" 'iterm2'
-brew cask install --appdir="/Applications" 'visual-studio-code'
-brew cask install --appdir="/Applications" 'google-chrome'
-brew cask install --appdir="/Applications" 'alfred'
-brew cask install --appdir="/Applications" 'spotify'
-brew cask install --appdir="/Applications" 'marta'
-brew cask install --appdir="/Applications" 'caffeine'
-brew cask install --appdir="/Applications" 'intellij-idea'
-brew cask install --appdir="/Applications" 'notion'
-brew cask install --appdir="/Applications" 'postman'
-brew cask install --appdir="/Applications" 'zoomus'
-brew cask install --appdir="/Applications" 'clipy'
-
-brew cask alfred link
+brew install --appdir="/Applications" 'iterm2'
+brew install --appdir="/Applications" 'visual-studio-code'
+brew install --appdir="/Applications" 'google-chrome'
+brew install --appdir="/Applications" 'alfred'
+brew install --appdir="/Applications" 'spotify'
+brew install --appdir="/Applications" 'marta'
+brew install --appdir="/Applications" 'caffeine'
+brew install --appdir="/Applications" 'intellij-idea'
+brew install --appdir="/Applications" 'notion'
+brew install --appdir="/Applications" 'postman'
+brew install --appdir="/Applications" 'zoomus'
+brew install --appdir="/Applications" 'clipy'
 
 # cleanup
 brew cleanup --force
