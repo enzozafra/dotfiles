@@ -33,6 +33,9 @@ brew install 'cask'
 brew install 'tomcat'
 brew install 'nvm'
 
+brew install homebrew/cask          
+brew tap homebrew/cask
+
 # Casks
 brew cask install --appdir="/Applications" 'iterm2'
 brew cask install --appdir="/Applications" 'visual-studio-code'
