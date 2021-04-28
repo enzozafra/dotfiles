@@ -202,3 +202,5 @@ source $HOME/.vimrc.config-plugins.vim
 source $HOME/.vimrc.statusline.vim
 
 highlight Comment cterm=italic
+
+colorscheme dracula

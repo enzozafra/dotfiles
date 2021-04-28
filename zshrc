@@ -21,7 +21,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-VIM_THEME="panda"
+VIM_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -135,6 +135,8 @@ alias gitvis="git log --graph --oneline --all --decorate"
 # paths
 alias dotfiles="cd ~/.dotfiles"
 alias dev="cd ~/Development"
+
+alias sqjava="cd ~/Development/java"
 
 # colorized cat
 alias cat="ccat"
