@@ -136,7 +136,11 @@ alias gitvis="git log --graph --oneline --all --decorate"
 alias dotfiles="cd ~/.dotfiles"
 alias dev="cd ~/Development"
 
+alias sqledger="cd ~/Development/java/settlements/ledger"
+alias sqbook="cd ~/Development/java/books"
 alias sqjava="cd ~/Development/java"
+alias sqtopsoil="cd ~/Development/topsoil"
+alias sqcompost="~/Development/topsoil/compost"
 
 # colorized cat
 alias cat="ccat"

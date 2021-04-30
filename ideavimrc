@@ -1,4 +1,4 @@
-set clipboard+=unnamed
+set clipboard+=ideaput
 vnoremap > ><CR>gvll
 vnoremap < <<CR>gvhh
 
@@ -11,3 +11,4 @@ vnoremap p "xp
 
 " select all
 nnoremap <leader>a ggVG<CR>
+set ideajoin
