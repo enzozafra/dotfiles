@@ -12,6 +12,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'markvincze/panda-vim', { 'as': 'panda' }
 Plug 'noahfrederick/vim-noctu'
+Plug 'arcticicestudio/nord-vim'
 
 " global syntax highlighting
 Plug 'sheerun/vim-polyglot'
@@ -56,7 +57,7 @@ Plug 'w0rp/ale'
 
 " el popo
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 

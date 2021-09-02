@@ -1,0 +1,25 @@
+<mtTheme>
+  <id>panda</id>
+  <editorColorsScheme>panda</editorColorsScheme>
+  <dark>true</dark>
+  <name>panda</name>
+  <colors>
+    <color id="background" value="2a2b2cff"/>
+    <color id="foreground" value="bbbbbbff"/>
+    <color id="text" value="bbbbbbff"/>
+    <color id="highlight" value="20427aff"/>
+    <color id="selectionBackground" value="20427aff"/>
+    <color id="selectionForeground" value="ffffffff"/>
+    <color id="button" value="2a2b2cff"/>
+    <color id="secondaryBackground" value="2a2b2cff"/>
+    <color id="disabled" value="777777ff"/>
+    <color id="contrast" value="232424ff"/>
+    <color id="tableSelected" value="20427aff"/>
+    <color id="secondBorder" value="2a2b2cff"/>
+    <color id="treeSelection" value="2f65ca3f"/>
+    <color id="notifications" value="4e5052ff"/>
+    <color id="accent" value="20427aff"/>
+    <color id="excluded" value="313335ff"/>
+  </colors>
+  <themeId>panda</themeId>
+</mtTheme>

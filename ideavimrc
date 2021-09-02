@@ -1,6 +1,6 @@
 set clipboard+=ideaput
-vnoremap > ><CR>gvll
-vnoremap < <<CR>gvhh
+vnoremap > >gv
+vnoremap < <gv
 
 nnoremap d "xd
 vnoremap d "xd

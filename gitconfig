@@ -8,8 +8,9 @@
 #   ████████▀  █▀      ▄████▀
 
 [user]
-	name = Enzo Zafra
+	name = enzo
 	email = enzo@squareup.com
+	signingkey = 410D3528A25ABF4A
 [push]
 	default = current
 [core]
@@ -32,3 +33,12 @@
 	trustExitCode = true
 [pull]
 	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2

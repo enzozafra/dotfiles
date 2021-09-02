@@ -131,6 +131,9 @@ alias nr="npm run"
 
 # git
 alias gitvis="git log --graph --oneline --all --decorate"
+alias gitignored="git ls-files -v|grep '^h'"
+alias gitexcluded="cat ./.git/info/exclude"
+alias gitold="git branch --sort=committerdate | xargs echo"
 
 # paths
 alias dotfiles="cd ~/.dotfiles"
@@ -139,6 +142,8 @@ alias dev="cd ~/Development"
 alias sqledger="cd ~/Development/java/settlements/ledger"
 alias sqbook="cd ~/Development/java/books"
 alias sqjava="cd ~/Development/java"
+alias sqscript="cd ~/Development/java/settlements/ledger/script"
+alias sqsig="cd ~/Development/signalform"
 alias sqtopsoil="cd ~/Development/topsoil"
 alias sqcompost="~/Development/topsoil/compost"
 

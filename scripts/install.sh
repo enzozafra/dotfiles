@@ -32,6 +32,7 @@ brew install 'gradle'
 brew install 'cask'
 brew install 'tomcat'
 brew install 'nvm'
+brew install 'ccat'
 
 brew install homebrew/cask          
 brew tap homebrew/cask
@@ -49,6 +50,7 @@ brew install --appdir="/Applications" 'notion'
 brew install --appdir="/Applications" 'postman'
 brew install --appdir="/Applications" 'zoomus'
 brew install --appdir="/Applications" 'clipy'
+brew install --appdir="/Applications" 'dozer'
 
 # cleanup
 brew cleanup --force
