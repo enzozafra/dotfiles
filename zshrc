@@ -134,6 +134,7 @@ alias gitvis="git log --graph --oneline --all --decorate"
 alias gitignored="git ls-files -v|grep '^h'"
 alias gitexcluded="cat ./.git/info/exclude"
 alias gitold="git branch --sort=committerdate | xargs echo"
+alias gitdb="git for-each-ref --format '%(refname:short)' refs/heads | grep -v \"master\|main\" | xargs git branch -D"
 
 # paths
 alias dotfiles="cd ~/.dotfiles"
