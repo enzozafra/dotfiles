@@ -203,4 +203,4 @@ source $HOME/.vimrc.statusline.vim
 
 highlight Comment cterm=italic
 
-colorscheme panda
+colorscheme dracula
