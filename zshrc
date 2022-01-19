@@ -206,3 +206,5 @@ export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$PATH:$HOME/stripe/work/exe"
