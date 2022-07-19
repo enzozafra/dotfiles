@@ -33,6 +33,7 @@ brew install 'cask'
 brew install 'tomcat'
 brew install 'nvm'
 brew install 'ccat'
+brew install 'jless'
 
 brew install homebrew/cask          
 brew tap homebrew/cask

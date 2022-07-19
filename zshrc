@@ -162,6 +162,9 @@ alias uppsala="cd ~/stripe/zoolander/uppsala"
 alias zoolander="cd ~/stripe/zoolander"
 alias lz="~/stripe/zoolander/dev/ij launch zoolander"
 alias zooproto="~/stripe/zoolander/dev/format-all"
+alias zoobuildfiles="~/stripe/zoolander/dev/regen-proto-build-files"
+
+alias hubfwd="(trap \"kill 0\" SIGINT; ssh -v -NL  10080:hubble-srv-kube.service.envoy:10080 \"\$(pay --host-type mydata-standard show-host)\" & ssh -v -N -R \"5442:localhost:10080\" \"\$(pay --host-type qa-mydev show-host)\")"
 
 # colorized cat
 alias cat="ccat"
@@ -193,6 +196,13 @@ cdr() {
   cd "$(git rev-parse --show-toplevel)"
 }
 
+# make git faster in big repos
+#https://stackoverflow.com/a/68238145
+function git_prompt_info() {
+    ref=$(git-branch-name -q -h 12 -b 64) || return
+    echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${ref}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -208,3 +218,4 @@ export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$PATH:$HOME/stripe/work/exe"
+export PATH="$PATH:$HOME/stripe/.cargo/bin"
